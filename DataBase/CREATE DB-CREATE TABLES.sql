@@ -16,7 +16,8 @@ CREATE TABLE Booking (
     arrivalDate DATE, 
     departureDate DATE,
     numAdult INT,
-    numChildren INT
+    numChildren INT,
+    invoiceNo INT
 );
 
 CREATE TABLE Bill (
@@ -50,7 +51,7 @@ CREATE TABLE Client (
 CREATE TABLE Admin (
 	AdminId INT,
     AdminTitle VARCHAR(20),
-    AdimnTitleNo VARCHAR(50),
+    AdminTitleNo VARCHAR(50),
     firstName VARCHAR(50),
     lastName VARCHAR(50),
     DOB DATE,

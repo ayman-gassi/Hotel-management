@@ -1,10 +1,5 @@
 USE HOTELAPP;
 
-ALTER TABLE booking
-ADD COLUMN invoiceno INT;
-
-ALTER TABLE admin
-CHANGE AdimnTitleNo admintitleno INT;
 
 # PRIMARY KEY CONSTRAINT
 

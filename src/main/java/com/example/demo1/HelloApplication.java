@@ -25,8 +25,6 @@ public class HelloApplication extends Application {
         Image icon = new Image("file:src/main/resources/images/hotel.png");
         stage.getIcons().add(icon);
         stage.setResizable(false);
-
-
     }
 
     public static void main(String[] args) {

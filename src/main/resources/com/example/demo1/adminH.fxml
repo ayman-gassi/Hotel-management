@@ -81,17 +81,7 @@
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="305.0" layoutY="304.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: skyblue;" text="UPDATE" textFill="WHITE">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Button>
-      <Button layoutX="209.0" layoutY="345.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: skyblue;" text="DELETE" textFill="WHITE">
-         <font>
-            <Font name="System Bold Italic" size="13.0" />
-         </font>
-      </Button>
-      <Button layoutX="305.0" layoutY="345.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: skyblue;" text="CLEAR" textFill="WHITE">
+      <Button layoutX="306.0" layoutY="304.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: skyblue;" text="CLEAR" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>

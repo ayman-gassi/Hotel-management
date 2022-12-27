@@ -14,7 +14,7 @@
    <children>
       <Pane layoutX="68.0" layoutY="42.0" prefHeight="413.0" prefWidth="776.0" style="-fx-background-color: white; -fx-border-radius: 30;">
          <children>
-            <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="14.0" layoutY="7.0" onDragDetected="#switchtohome" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/undo.png" />
                </image>
@@ -50,7 +50,7 @@
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
             </Label>
-            <TextArea editable="false" layoutX="403.0" layoutY="57.0" prefHeight="245.0" prefWidth="342.0" text="Now led tedious shy lasting fe&#10;males off. Dashwood marianne in of entrance be on wonder&#10;ed possible building. Wondered sociable he carriage in spe&#10;edily margaret. Up devonshire of he thoroughly insensi&#10;ble alteration. An mr settling occasion insisted distance &#10;ladyship so. Not attention say frankness intention out dash&#10;woods now curiosity. Stronger ecstatic as no judgment daug&#10;hter speedily thoughts. Worse downs nor might she court di&#10;d nay forth these." />
+            <TextArea editable="false" layoutX="403.0" layoutY="57.0" prefHeight="245.0" prefWidth="342.0" text="Now led tedious shy lasting fe&#10;males off. Dashwood marianne in of entrance be on wonder&#10;ed possible building. Wondered sociable he carriage in spe&#10;edily margaret. Up devonshire of he thoroughly insensi&#10;ble alteration. An mr settling occasion insisted distance &#10;ladyship so. Not attention say frankness intention out dash&#10;woods now curiosity. Stronger ecstatic as no jud&#10;gment daug&#10;hter speedily thoughts. Worse downs nor might she &#10;court di&#10;d nay forth these." wrapText="true" />
             <Button layoutX="503.0" layoutY="338.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: skyblue;" text="BOOK" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />

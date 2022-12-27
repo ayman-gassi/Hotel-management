@@ -23,6 +23,7 @@ public class HelloController implements Initializable {
     private Stage stage;
     private Scene scene;
 
+
     @FXML
     VBox vbListRooms ;
     @FXML
@@ -34,6 +35,7 @@ public class HelloController implements Initializable {
         for(int i=0;i<nodes.length;i++){
             try {
                 nodes[i] = (Node)FXMLLoader.load(getClass().getResource("ItemDesign.fxml"));
+                vbListRooms.setSpacing(15);
                 vbListRooms.getChildren().add(nodes[i]);
             } catch (IOException ex) {
                 System.out.println(ex.getMessage());
@@ -41,16 +43,16 @@ public class HelloController implements Initializable {
         }
     }
 
-    public void switchtobooking(ActionEvent event) throws IOException {
-        Parent group = FXMLLoader.load(getClass().getResource("booking.fxml"));
+
+  public void switchtoinfo(ActionEvent event) throws IOException {
+        Parent group = FXMLLoader.load(getClass().getResource("roominfo.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(group);
         stage.setScene(scene);
         stage.setWidth(912);
         stage.setHeight(520);
-        stage.setTitle("Hotel | BOOKING");
+        stage.setTitle("Hotel | HOME");
         stage.show();
-
     }
     public void switchtohome(ActionEvent event) throws IOException {
         Parent group = FXMLLoader.load(getClass().getResource("hello-view.fxml"));

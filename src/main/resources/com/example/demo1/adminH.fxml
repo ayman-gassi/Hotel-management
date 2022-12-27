@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="497.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
+   <children>
+      <Pane prefHeight="498.0" prefWidth="174.0" style="-fx-background-color: skyblue;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="103.0" layoutX="36.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/admin-with-cogwheels.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="55.0" layoutY="149.0" text="Welcome">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="167.0" text="XjonSnow">
+               <font>
+                  <Font name="Bookman Old Style" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="15.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Home">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="15.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="      Dashboard">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="12.0" layoutY="418.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Logout">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="36.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/home1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="36.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/dashboard.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="36.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/logout.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="20.0" layoutY="205.0" prefHeight="2.0" prefWidth="131.0" style="-fx-background-color: white;" />
+            <Button layoutX="15.0" layoutY="329.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="  Account">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="31.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/account.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="416.0" layoutY="54.0" prefHeight="366.0" prefWidth="2.0" style="-fx-background-color: black;" />
+      <TextField alignment="CENTER" layoutX="191.0" layoutY="134.0" prefHeight="26.0" prefWidth="213.0" promptText="Room ID" />
+      <TextField alignment="CENTER" layoutX="191.0" layoutY="175.0" prefHeight="26.0" prefWidth="213.0" promptText="Room Price" />
+      <ComboBox layoutX="191.0" layoutY="220.0" prefHeight="26.0" prefWidth="214.0" promptText="Room Type" />
+      <Button layoutX="209.0" layoutY="304.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: skyblue;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="305.0" layoutY="304.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: skyblue;" text="UPDATE" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="209.0" layoutY="345.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: skyblue;" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="305.0" layoutY="345.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: skyblue;" text="CLEAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="497.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
+<AnchorPane prefHeight="497.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AdminHomeController">
    <children>
       <Pane prefHeight="498.0" prefWidth="174.0" style="-fx-background-color: skyblue;">
          <children>
@@ -34,7 +36,7 @@
                   <Font name="Bell MT" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="15.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="      Dashboard">
+            <Button fx:id="btnDashboard" layoutX="19.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="      Dashboard">
                <font>
                   <Font name="Bell MT" size="18.0" />
                </font>
@@ -60,12 +62,12 @@
                </image>
             </ImageView>
             <Pane layoutX="20.0" layoutY="205.0" prefHeight="2.0" prefWidth="131.0" style="-fx-background-color: white;" />
-            <Button layoutX="15.0" layoutY="329.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="  Account">
+            <Button layoutX="20.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="  Account">
                <font>
                   <Font name="Bell MT" size="18.0" />
                </font>
             </Button>
-            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="31.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="33.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/account.png" />
                </image>
@@ -86,5 +88,13 @@
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Button>
+      <TableView layoutX="439.0" layoutY="21.0" prefHeight="450.0" prefWidth="458.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="RoomNo" />
+          <TableColumn prefWidth="75.0" text="Room Type" />
+            <TableColumn prefWidth="75.0" text="Room Price" />
+            <TableColumn prefWidth="75.0" text="Occupancy" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

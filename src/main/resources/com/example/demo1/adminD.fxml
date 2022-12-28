@@ -2,13 +2,15 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="497.0" prefWidth="912.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
+<AnchorPane prefHeight="497.0" prefWidth="912.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AdminDashController">
    <children>
       <Pane prefHeight="498.0" prefWidth="174.0" style="-fx-background-color: skyblue;">
          <children>
@@ -27,7 +29,7 @@
                   <Font name="Bookman Old Style" size="24.0" />
                </font>
             </Label>
-            <Button layoutX="15.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Home">
+            <Button fx:id="btnHome" layoutX="15.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Home">
                <font>
                   <Font name="Bell MT" size="18.0" />
                </font>
@@ -58,19 +60,19 @@
                </image>
             </ImageView>
             <Pane layoutX="20.0" layoutY="205.0" prefHeight="2.0" prefWidth="131.0" style="-fx-background-color: white;  -fx-border-radius: 50px;" />
-            <Button layoutX="13.0" layoutY="327.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="  Account">
+            <Button fx:id="btnAccount" layoutX="18.0" layoutY="325.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="  Account">
                <font>
                   <Font name="Bell MT" size="18.0" />
                </font>
             </Button>
-            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="29.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="34.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/account.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Pane layoutX="198.0" layoutY="50.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: skyblue; -fx-border-radius: 50 px;">
+      <Pane layoutX="198.0" layoutY="50.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: skyblue;">
          <children>
             <ImageView fitHeight="69.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -88,7 +90,7 @@
                </font>
             </Label>
          </children></Pane>
-      <Pane layoutX="435.0" layoutY="50.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: skyblue; -fx-border-radius: 50 px;">
+      <Pane layoutX="435.0" layoutY="50.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: skyblue;">
          <children>
             <ImageView fitHeight="69.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -107,7 +109,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="675.0" layoutY="50.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: skyblue; -fx-border-radius: 50 px;">
+      <Pane layoutX="675.0" layoutY="50.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: skyblue;">
          <children>
             <ImageView fitHeight="69.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -126,5 +128,15 @@
             </Label>
          </children>
       </Pane>
+      <TableView layoutX="198.0" layoutY="184.0" prefHeight="304.0" prefWidth="678.0">
+        <columns>
+          <TableColumn minWidth="-1.0" prefWidth="75.0" text="Title No." />
+          <TableColumn prefWidth="75.0" text="Title Type" />
+            <TableColumn prefWidth="75.0" text="First Name" />
+            <TableColumn prefWidth="75.0" text="Last Name" />
+            <TableColumn prefWidth="75.0" text="Email" />
+            <TableColumn maxWidth="100.0" prefWidth="75.0" text="Title Type" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

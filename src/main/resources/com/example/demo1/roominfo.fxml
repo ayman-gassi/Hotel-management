@@ -37,12 +37,12 @@
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="236.0" layoutY="244.0" text="sqdsqdqsd">
+            <Label fx:id="lbRoomType" layoutX="236.0" layoutY="244.0" text="sqdsqdqsd">
                <font>
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="235.0" layoutY="278.0" text="sssqdqs">
+            <Label fx:id="lbRoomPrice" layoutX="235.0" layoutY="278.0" text="sssqdqs">
                <font>
                   <Font name="Arial Rounded MT Bold" size="12.0" />
                </font>
@@ -52,7 +52,7 @@
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
             </Label>
-            <TextArea disable="true" editable="false" layoutX="41.0" layoutY="344.0" prefHeight="59.0" prefWidth="348.0" text="Nowhe thoroughly insensible alteration. An court did nay forth these." wrapText="true" />
+            <TextArea fx:id="taDetails" disable="true" editable="false" layoutX="41.0" layoutY="344.0" prefHeight="59.0" prefWidth="348.0" text="Nowhe thoroughly insensible alteration. An court did nay forth these." wrapText="true" />
             <Button fx:id="book" layoutX="571.0" layoutY="338.0" mnemonicParsing="false" onAction="#payment" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: skyblue;" text="BOOK" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />

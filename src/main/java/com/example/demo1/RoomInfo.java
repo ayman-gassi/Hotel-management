@@ -1,5 +1,8 @@
 package com.example.demo1;
 
+import com.example.demo1.roomBox;
+import com.example.demo1.Modules.Room;
+
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -17,6 +20,7 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -35,8 +39,26 @@ public class RoomInfo implements Initializable {
     Label loading;
     @FXML
     Button book;
+    @FXML
+    Label lbRoomType;
+    @FXML
+    Label lbRoomPrice;
+    @FXML
+    TextArea taDetails;
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        System.out.println(roomBox.clicked);
+        Room room = new Room();
+            try {
+                Room roomInfo = room.getRoom(roomBox.clicked);
+                lbRoomType.setText(roomInfo.getroomType());
+                lbRoomPrice.setText(String.valueOf(roomInfo.getRoomPrice()));
+                taDetails.setText(roomInfo.getDetails());
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
         diapo();
         ArrivalDate.setDayCellFactory(picker -> new DateCell() {
             public void updateItem(LocalDate date, boolean empty) {

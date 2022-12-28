@@ -30,5 +30,6 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
+      <Label fx:id="lbId" layoutX="602.0" layoutY="17.0" text="Label" visible="false" />
    </children>
 </AnchorPane>

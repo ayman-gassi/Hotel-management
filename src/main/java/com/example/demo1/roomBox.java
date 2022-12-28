@@ -1,6 +1,6 @@
 package com.example.demo1;
 
-import com.example.demo1.Modules.room;
+import com.example.demo1.Modules.Room;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,6 +24,7 @@ public class roomBox implements Initializable {
     private Stage stage;
     private Scene scene;
     public static int index = 0;
+    public static int clicked = -1;
 
     @FXML
     Button btnShow;
@@ -32,26 +33,27 @@ public class roomBox implements Initializable {
     @FXML
     TextArea taRoomDetails;
     @FXML
-    Label lbRoomType,lbRoomName;
+    Label lbRoomType,lbRoomName,lbId;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)  {
-        room Room = new room();
-        ObservableList<room> list = Room.getRoom();
+        Room Room = new Room();
+        ObservableList<com.example.demo1.Modules.Room> list = Room.getRooms();
         Node[] nodes = new Node[list.size()];
-        System.out.println(list);
         populateRoom(roomBox.index,list.get(roomBox.index));
         roomBox.index++;
     }
 
-    public void populateRoom(int i,room item){
+    public void populateRoom(int i, Room item){
         lbRoomType.setText(item.getroomType());
         Integer no = item.getroomname();
         lbRoomName.setText(no.toString());
         taRoomDetails.setText(item.getDetails());
+        lbId.setText(String.valueOf(item.getRoomNo()));
     }
 
-    public void switchtoinfo(ActionEvent event){
+    public void switchtoinfo(ActionEvent event) throws IOException{
+        roomBox.clicked = Integer.valueOf(lbId.getText());
         roomBox.index = 0;
         Parent group = null;
         try {

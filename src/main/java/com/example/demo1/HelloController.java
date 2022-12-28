@@ -34,9 +34,14 @@ public class HelloController implements Initializable {
         Node[] nodes = new Node[10];
         for(int i=0;i<nodes.length;i++){
             try {
-                nodes[i] = (Node)FXMLLoader.load(getClass().getResource("ItemDesign.fxml"));
-                vbListRooms.setSpacing(15);
-                vbListRooms.getChildren().add(nodes[i]);
+                if(vbListRooms != null) {
+                    nodes[i] = (Node) FXMLLoader.load(getClass().getResource("ItemDesign.fxml"));
+                    vbListRooms.setSpacing(15);
+                    vbListRooms.getChildren().add(nodes[i]);
+                }
+                else{
+                    Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+                }
             } catch (IOException ex) {
                 System.out.println(ex.getMessage());
             }

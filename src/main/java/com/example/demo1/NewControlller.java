@@ -10,6 +10,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -17,17 +18,15 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class NewControlller implements Initializable {
+public class NewControlller{
 
     private Stage stage;
     private Scene scene;
     @FXML
     Button btnShow;
+    @FXML
+    ImageView btnReturn;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
     public void switchtoinfo(ActionEvent event){
         Parent group = null;
         try {
@@ -43,4 +42,5 @@ public class NewControlller implements Initializable {
         stage.setTitle("Hotel | HOME");
         stage.show();
     }
+
 }

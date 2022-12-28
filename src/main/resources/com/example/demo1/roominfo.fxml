@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
@@ -10,14 +11,17 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="497.0" prefWidth="912.0" style="-fx-background-color: linear-gradient(to right,#2193b0, #6dd5ed);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.HelloController">
+<AnchorPane prefHeight="497.0" prefWidth="912.0" style="-fx-background-color: linear-gradient(to right,#2193b0, #6dd5ed);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.RoomInfo">
    <children>
       <Pane layoutX="68.0" layoutY="42.0" prefHeight="413.0" prefWidth="776.0" style="-fx-background-color: white; -fx-border-radius: 30;">
          <children>
-            <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="14.0" layoutY="7.0" onDragDetected="#switchtohome" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="btnReturn" fitHeight="33.0" fitWidth="31.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/undo.png" />
                </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </ImageView>
             <ImageView fitHeight="157.0" fitWidth="219.0" layoutX="117.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
                <image>

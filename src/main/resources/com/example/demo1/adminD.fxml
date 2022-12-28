@@ -70,7 +70,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="1.0" prefHeight="498.0" prefWidth="174.0" style="-fx-background-color: skyblue;">
+      <Pane prefHeight="498.0" prefWidth="174.0" style="-fx-background-color: skyblue;">
          <children>
             <ImageView fitHeight="106.0" fitWidth="103.0" layoutX="36.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -87,7 +87,7 @@
                   <Font name="Bookman Old Style" size="24.0" />
                </font>
             </Label>
-            <Button layoutX="15.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Home">
+            <Button fx:id="btnHome" layoutX="15.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Home">
                <font>
                   <Font name="Bell MT" size="18.0" />
                </font>
@@ -136,7 +136,7 @@
                </cursor>
             </ImageView>
             <Pane layoutX="20.0" layoutY="205.0" prefHeight="2.0" prefWidth="131.0" style="-fx-background-color: white;" />
-            <Button fx:id="btnHome" layoutX="20.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="  Account">
+            <Button layoutX="20.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="  Account">
                <font>
                   <Font name="Bell MT" size="18.0" />
                </font>
@@ -154,9 +154,9 @@
             </ImageView>
          </children>
       </Pane>
-      <ScrollPane layoutX="189.0" layoutY="177.0" prefHeight="304.0" prefWidth="678.0">
+      <ScrollPane layoutX="196.0" layoutY="173.0" prefHeight="304.0" prefWidth="678.0">
          <content>
-            <TableView fx:id="tvClients" prefHeight="299.0" prefWidth="662.0">
+            <TableView fx:id="tvClients" prefHeight="299.0" prefWidth="678.0">
                <columns>
                   <TableColumn fx:id="id" minWidth="100.0" prefWidth="75.0" text="ID" />
                   <TableColumn fx:id="fname" minWidth="100.0" prefWidth="75.0" text="First Name" />

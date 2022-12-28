@@ -10,7 +10,7 @@ public class DBConnectivity {
 
     public DBConnectivity(){
         try {
-            String url = "jdbc:mysql://localhost/hotelapp";
+            String url = "jdbc:mysql://localhost:3308/hotelapp";
             String username = "root";
             String password = "";
 

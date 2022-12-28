@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -75,26 +76,35 @@
          </children>
       </Pane>
       <Pane layoutX="416.0" layoutY="54.0" prefHeight="366.0" prefWidth="2.0" style="-fx-background-color: black;" />
-      <TextField alignment="CENTER" layoutX="191.0" layoutY="134.0" prefHeight="26.0" prefWidth="213.0" promptText="Room ID" />
-      <TextField alignment="CENTER" layoutX="191.0" layoutY="175.0" prefHeight="26.0" prefWidth="213.0" promptText="Room Price" />
-      <ComboBox layoutX="191.0" layoutY="220.0" prefHeight="26.0" prefWidth="214.0" promptText="Room Type" />
-      <Button layoutX="209.0" layoutY="304.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: skyblue;" text="ADD" textFill="WHITE">
+      <TextField fx:id="txtid" alignment="CENTER" layoutX="191.0" layoutY="134.0" prefHeight="26.0" prefWidth="213.0" promptText="Room ID" />
+      <TextField fx:id="txtprice" alignment="CENTER" layoutX="191.0" layoutY="175.0" prefHeight="26.0" prefWidth="213.0" promptText="Room Price" />
+      <ComboBox fx:id="choose" layoutX="191.0" layoutY="220.0" prefHeight="26.0" prefWidth="214.0" promptText="Room Type" />
+      <Button fx:id="ADD" layoutX="209.0" layoutY="304.0" mnemonicParsing="false" onAction="#ADD" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: skyblue;" text="ADD" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="306.0" layoutY="304.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: skyblue;" text="CLEAR" textFill="WHITE">
+      <Button fx:id="clear" layoutX="306.0" layoutY="304.0" mnemonicParsing="false" onAction="#clear" prefHeight="26.0" prefWidth="74.0" style="-fx-background-color: skyblue;" text="CLEAR" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Button>
-      <TableView layoutX="439.0" layoutY="21.0" prefHeight="450.0" prefWidth="458.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="RoomNo" />
-          <TableColumn prefWidth="75.0" text="Room Type" />
-            <TableColumn prefWidth="75.0" text="Room Price" />
-            <TableColumn prefWidth="75.0" text="Occupancy" />
-        </columns>
-      </TableView>
+      <ScrollPane layoutX="439.0" layoutY="21.0">
+         <content>
+            <TableView fx:id="homeview" layoutX="3.0" layoutY="1.0" prefHeight="434.0" prefWidth="456.0">
+              <columns>
+                <TableColumn fx:id="roomn" prefWidth="110.40008240938187" text="RoomNo" />
+                <TableColumn fx:id="roomt" prefWidth="93.5999755859375" text="Room Type" />
+                  <TableColumn fx:id="roomp" minWidth="0.0" prefWidth="135.19996643066406" text="Room Price" />
+                  <TableColumn fx:id="roomo" minWidth="15.2000732421875" prefWidth="111.199951171875" text="Occupancy" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Label fx:id="alert" alignment="CENTER" layoutX="190.0" layoutY="93.0" prefHeight="27.0" prefWidth="214.0" style="-fx-background-color: #00e500;" text="YOU ADDED A ROOM" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

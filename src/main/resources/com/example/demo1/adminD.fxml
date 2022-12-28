@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -12,66 +13,6 @@
 
 <AnchorPane prefHeight="497.0" prefWidth="912.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AdminDashController">
    <children>
-      <Pane prefHeight="498.0" prefWidth="174.0" style="-fx-background-color: skyblue;">
-         <children>
-            <ImageView fitHeight="106.0" fitWidth="103.0" layoutX="36.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/admin-with-cogwheels.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="55.0" layoutY="149.0" text="Welcome">
-               <font>
-                  <Font name="Bookman Old Style Italic" size="15.0" />
-               </font>
-            </Label>
-            <Label layoutX="29.0" layoutY="167.0" text="XjonSnow">
-               <font>
-                  <Font name="Bookman Old Style" size="24.0" />
-               </font>
-            </Label>
-            <Button fx:id="btnHome" layoutX="15.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Home">
-               <font>
-                  <Font name="Bell MT" size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="15.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="      Dashboard">
-               <font>
-                  <Font name="Bell MT" size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="12.0" layoutY="418.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Logout">
-               <font>
-                  <Font name="Bell MT" size="18.0" />
-               </font>
-            </Button>
-            <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="36.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/home1.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="36.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/dashboard.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="36.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/logout.png" />
-               </image>
-            </ImageView>
-            <Pane layoutX="20.0" layoutY="205.0" prefHeight="2.0" prefWidth="131.0" style="-fx-background-color: white;  -fx-border-radius: 50px;" />
-            <Button fx:id="btnAccount" layoutX="18.0" layoutY="325.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="  Account">
-               <font>
-                  <Font name="Bell MT" size="18.0" />
-               </font>
-            </Button>
-            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="34.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../images/account.png" />
-               </image>
-            </ImageView>
-         </children>
-      </Pane>
       <Pane layoutX="198.0" layoutY="50.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: skyblue;">
          <children>
             <ImageView fitHeight="69.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
@@ -138,5 +79,89 @@
             <TableColumn maxWidth="100.0" prefWidth="75.0" text="Title Type" />
         </columns>
       </TableView>
+      <Pane layoutX="1.0" prefHeight="498.0" prefWidth="174.0" style="-fx-background-color: skyblue;">
+         <children>
+            <ImageView fitHeight="106.0" fitWidth="103.0" layoutX="36.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/admin-with-cogwheels.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="55.0" layoutY="149.0" text="Welcome">
+               <font>
+                  <Font name="Bookman Old Style Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="167.0" text="XjonSnow">
+               <font>
+                  <Font name="Bookman Old Style" size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="15.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Home">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnDashboard" layoutX="19.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="      Dashboard">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="12.0" layoutY="418.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Logout">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="36.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/home1.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="36.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/dashboard.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="36.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/logout.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Pane layoutX="20.0" layoutY="205.0" prefHeight="2.0" prefWidth="131.0" style="-fx-background-color: white;" />
+            <Button layoutX="20.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="  Account">
+               <font>
+                  <Font name="Bell MT" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="33.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/account.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

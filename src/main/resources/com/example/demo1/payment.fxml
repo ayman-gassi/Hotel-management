@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="550.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.payment">
    <children>
       <Pane prefHeight="78.0" prefWidth="500.0" style="-fx-background-color: skyblue;">
@@ -38,9 +37,11 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <TextField alignment="CENTER" layoutX="110.0" layoutY="250.0" prefHeight="33.0" prefWidth="280.0" promptText="Enter Your CreditCard Number" />
-      <TextField alignment="CENTER" layoutX="110.0" layoutY="303.0" prefHeight="34.0" prefWidth="134.0" promptText="expired date" />
-      <TextField alignment="CENTER" layoutX="255.0" layoutY="303.0" prefHeight="34.0" prefWidth="134.0" promptText="CVV" />
+      <TextField alignment="CENTER" layoutX="110.0" layoutY="287.0" prefHeight="33.0" prefWidth="280.0" promptText="Enter Your CreditCard Number" />
+      <TextField alignment="CENTER" layoutX="110.0" layoutY="340.0" prefHeight="34.0" prefWidth="134.0" promptText="expired date" />
+      <TextField alignment="CENTER" layoutX="255.0" layoutY="340.0" prefHeight="34.0" prefWidth="134.0" promptText="CVV" />
       <TextField disable="true" editable="false" layoutX="110.0" layoutY="108.0" prefHeight="115.0" prefWidth="280.0" text="HERE WE ARE GOING TO DISPLAY SOME INFO" />
+      <TextField alignment="CENTER" layoutX="110.0" layoutY="240.0" prefHeight="34.0" prefWidth="134.0" promptText="First Name" />
+      <TextField alignment="CENTER" layoutX="255.0" layoutY="240.0" prefHeight="34.0" prefWidth="134.0" promptText="Last Name" />
    </children>
 </AnchorPane>

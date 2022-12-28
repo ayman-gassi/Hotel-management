@@ -28,16 +28,20 @@ public class HelloController implements Initializable {
     VBox vbListRooms;
     @FXML
     TextArea taRoomDetails;
-
+    @FXML
+    Label lbRoomType,lbRoomName;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         Node[] nodes = new Node[10];
         for (int i = 0; i < nodes.length; i++) {
             try {
                 if (vbListRooms != null) {
+
                     nodes[i] = (Node) FXMLLoader.load(getClass().getResource("ItemDesign.fxml"));
                     vbListRooms.setSpacing(15);
                     vbListRooms.getChildren().add(nodes[i]);
+
                 } else {
                     Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
                 }

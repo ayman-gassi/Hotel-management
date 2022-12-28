@@ -14,7 +14,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         stage.setTitle("Hotel | HOME");
-        Parent group = FXMLLoader.load(getClass().getResource("adminH.fxml"));
+        Parent group = FXMLLoader.load(getClass().getResource("adminD.fxml"));
         Scene scene = new Scene(group);
         stage.setScene(scene);
         stage.show();
@@ -23,7 +23,6 @@ public class HelloApplication extends Application {
         Image icon = new Image("file:src/main/resources/images/hotel.png");
         stage.getIcons().add(icon);
         stage.setResizable(false);
-
     }
 
     public static void main(String[] args) {

@@ -3,6 +3,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
@@ -69,16 +70,6 @@
             </Label>
          </children>
       </Pane>
-      <TableView layoutX="198.0" layoutY="184.0" prefHeight="304.0" prefWidth="678.0">
-        <columns>
-          <TableColumn minWidth="-1.0" prefWidth="75.0" text="Title No." />
-          <TableColumn prefWidth="75.0" text="Title Type" />
-            <TableColumn prefWidth="75.0" text="First Name" />
-            <TableColumn prefWidth="75.0" text="Last Name" />
-            <TableColumn prefWidth="75.0" text="Email" />
-            <TableColumn maxWidth="100.0" prefWidth="75.0" text="Title Type" />
-        </columns>
-      </TableView>
       <Pane layoutX="1.0" prefHeight="498.0" prefWidth="174.0" style="-fx-background-color: skyblue;">
          <children>
             <ImageView fitHeight="106.0" fitWidth="103.0" layoutX="36.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
@@ -145,7 +136,7 @@
                </cursor>
             </ImageView>
             <Pane layoutX="20.0" layoutY="205.0" prefHeight="2.0" prefWidth="131.0" style="-fx-background-color: white;" />
-            <Button layoutX="20.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="  Account">
+            <Button fx:id="btnHome" layoutX="20.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="  Account">
                <font>
                   <Font name="Bell MT" size="18.0" />
                </font>
@@ -163,5 +154,19 @@
             </ImageView>
          </children>
       </Pane>
+      <ScrollPane layoutX="189.0" layoutY="177.0" prefHeight="304.0" prefWidth="678.0">
+         <content>
+            <TableView fx:id="tvClients" prefHeight="299.0" prefWidth="662.0">
+               <columns>
+                  <TableColumn fx:id="id" minWidth="100.0" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="fname" minWidth="100.0" prefWidth="75.0" text="First Name" />
+                  <TableColumn fx:id="lname" minWidth="100.0" prefWidth="75.0" text="Last Name" />
+                  <TableColumn fx:id="titletype" minWidth="100.0" prefWidth="75.0" text="Title Type" />
+                  <TableColumn fx:id="titleno" minWidth="100.0" prefWidth="75.0" text="Title No." />
+                  <TableColumn fx:id="mail" minWidth="170.0" prefWidth="75.0" text="Email" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

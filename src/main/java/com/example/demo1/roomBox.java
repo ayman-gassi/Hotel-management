@@ -1,18 +1,25 @@
 package com.example.demo1;
 
+import com.example.demo1.Modules.room;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class roomBox{
+public class roomBox implements Initializable {
 
     private Stage stage;
     private Scene scene;
@@ -20,6 +27,24 @@ public class roomBox{
     Button btnShow;
     @FXML
     ImageView btnReturn;
+    @FXML
+    TextArea taRoomDetails;
+    @FXML
+    Label lbRoomType,lbRoomName;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle)  {
+        room Room = new room();
+        ObservableList<room> list = Room.getRoom();
+        Node[] nodes = new Node[list.size()];
+        System.out.println(list.size());
+
+        for (room item : list) {
+                    lbRoomType.setText(item.getroomType());
+                    Integer no = item.getroomname();
+                    lbRoomName.setText(no.toString());
+                }
+    }
 
     public void switchtoinfo(ActionEvent event){
         Parent group = null;

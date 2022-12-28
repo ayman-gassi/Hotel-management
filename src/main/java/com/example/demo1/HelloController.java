@@ -1,5 +1,7 @@
 package com.example.demo1;
 
+import com.example.demo1.Modules.room;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -16,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 
@@ -26,16 +29,15 @@ public class HelloController implements Initializable {
 
     @FXML
     VBox vbListRooms;
-    @FXML
-    TextArea taRoomDetails;
-    @FXML
-    Label lbRoomType,lbRoomName;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        Node[] nodes = new Node[10];
+        room Room = new room();
+        ObservableList<room> list = Room.getRoom();
+        Node[] nodes = new Node[list.size()];
         for (int i = 0; i < nodes.length; i++) {
             try {
+
                 if (vbListRooms != null) {
 
                     nodes[i] = (Node) FXMLLoader.load(getClass().getResource("ItemDesign.fxml"));
@@ -49,6 +51,7 @@ public class HelloController implements Initializable {
                 System.out.println(ex.getMessage());
             }
         }
+
     }
 
 }

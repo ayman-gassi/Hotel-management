@@ -21,10 +21,20 @@ public class room{
     }
     public room(int ROOMNO,String ROOMTYPE,float ROOMPRICE,int OCCUPANCY){
         DBConnectivity connect = new DBConnectivity();
+        connection = connect.getConnection();
         this.roomNo=ROOMNO;
         this.roomType=ROOMTYPE;
         this.occupancy=OCCUPANCY;
         this.roomPrice=ROOMPRICE;
+    }
+    public String getroomType(){
+       return  this.roomType;
+    }
+    public int getroomname(){
+        return  this.roomNo;
+    }
+    public float getroomDesc(){
+        return  this.roomPrice;
     }
     public ObservableList getRoom() {
         ObservableList<room> data = FXCollections.observableArrayList();
@@ -64,6 +74,8 @@ public class room{
         return true;
     }
     public static void main(String[] args) {
+        room ne = new room();
+        ObservableList<room> data = ne.getRoom();
 
     }
 

@@ -33,6 +33,8 @@ public class RoomInfo implements Initializable {
     DatePicker ArrivalDate,DepartureDate;
     @FXML
     Label loading;
+    @FXML
+    Button book;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         diapo();
@@ -94,5 +96,19 @@ public class RoomInfo implements Initializable {
         }));
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.play();
+    }
+    public void payment(ActionEvent e) throws IOException {
+        Stage st = new Stage();
+        st.setTitle("Payment");
+        st.show();
+        st.setWidth(500);
+        st.setHeight(550);
+        Image icon = new Image("file:src/main/resources/images/hotel.png");
+        st.getIcons().add(icon);
+        st.setResizable(false);
+        Parent group = FXMLLoader.load(getClass().getResource("payment.fxml"));
+        Scene scene = new Scene(group);
+        st.setScene(scene);
+
     }
 }

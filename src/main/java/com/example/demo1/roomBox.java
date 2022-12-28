@@ -31,7 +31,7 @@ public class roomBox{
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(group);
         stage.setScene(scene);
-        stage.setWidth(912);
+        stage.setWidth(920);
         stage.setHeight(520);
         stage.setTitle("Hotel | BOOKING");
         stage.show();

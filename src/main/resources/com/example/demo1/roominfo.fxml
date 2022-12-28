@@ -25,7 +25,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fx:id="currentimg" fitHeight="176.0" fitWidth="321.0" layoutX="55.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="currentimg" fitHeight="176.0" fitWidth="321.0" layoutX="59.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
             <Separator layoutX="421.0" layoutY="23.0" orientation="VERTICAL" prefHeight="386.0" prefWidth="6.0" />
             <Label layoutX="132.0" layoutY="244.0" text="Room Type : ">
                <font>
@@ -53,7 +53,7 @@
                </font>
             </Label>
             <TextArea disable="true" editable="false" layoutX="41.0" layoutY="344.0" prefHeight="59.0" prefWidth="348.0" text="Nowhe thoroughly insensible alteration. An court did nay forth these." wrapText="true" />
-            <Button layoutX="571.0" layoutY="338.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: skyblue;" text="BOOK" textFill="WHITE">
+            <Button fx:id="book" layoutX="571.0" layoutY="338.0" mnemonicParsing="false" onAction="#payment" prefHeight="31.0" prefWidth="143.0" style="-fx-background-color: skyblue;" text="BOOK" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>

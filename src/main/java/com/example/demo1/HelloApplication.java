@@ -18,7 +18,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(group);
         stage.setScene(scene);
         stage.show();
-        stage.setWidth(912);
+        stage.setWidth(920);
         stage.setHeight(520);
         Image icon = new Image("file:src/main/resources/images/hotel.png");
         stage.getIcons().add(icon);

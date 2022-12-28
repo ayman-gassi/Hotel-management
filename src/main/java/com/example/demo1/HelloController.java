@@ -25,21 +25,20 @@ public class HelloController implements Initializable {
 
 
     @FXML
-    VBox vbListRooms ;
+    VBox vbListRooms;
     @FXML
     TextArea taRoomDetails;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Node[] nodes = new Node[10];
-        for(int i=0;i<nodes.length;i++){
+        for (int i = 0; i < nodes.length; i++) {
             try {
-                if(vbListRooms != null) {
+                if (vbListRooms != null) {
                     nodes[i] = (Node) FXMLLoader.load(getClass().getResource("ItemDesign.fxml"));
                     vbListRooms.setSpacing(15);
                     vbListRooms.getChildren().add(nodes[i]);
-                }
-                else{
+                } else {
                     Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
                 }
             } catch (IOException ex) {
@@ -48,16 +47,6 @@ public class HelloController implements Initializable {
         }
     }
 
-
-  public void switchtoinfo(ActionEvent event) throws IOException {
-        Parent group = FXMLLoader.load(getClass().getResource("roominfo.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(group);
-        stage.setScene(scene);
-        stage.setWidth(912);
-        stage.setHeight(520);
-        stage.setTitle("Hotel | HOME");
-        stage.show();
-    }
 }
+
 

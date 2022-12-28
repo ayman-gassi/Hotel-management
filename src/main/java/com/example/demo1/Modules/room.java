@@ -13,19 +13,24 @@ public class room{
     private int roomNo;
     private String roomType;
     private float roomPrice;
+    private String details;
     private int occupancy;
 
+    public String getDetails() {
+        return details;
+    }
     public room(){
         DBConnectivity connect = new DBConnectivity();
         connection = connect.getConnection();
     }
-    public room(int ROOMNO,String ROOMTYPE,float ROOMPRICE,int OCCUPANCY){
+    public room(int ROOMNO,String ROOMTYPE,float ROOMPRICE,int OCCUPANCY,String DETAILS){
         DBConnectivity connect = new DBConnectivity();
         connection = connect.getConnection();
         this.roomNo=ROOMNO;
         this.roomType=ROOMTYPE;
         this.occupancy=OCCUPANCY;
         this.roomPrice=ROOMPRICE;
+        this.details=DETAILS;
     }
     public String getroomType(){
        return  this.roomType;
@@ -46,7 +51,8 @@ public class room{
                 String roomTP = resultSet.getString("roomType");
                 int OCCU = resultSet.getInt("occupancy");
                 float price = resultSet.getFloat("roomPrice");
-                data.add(new room(roomnbr,roomTP,price,OCCU));
+                String details = resultSet.getString("details");
+                data.add(new room(roomnbr,roomTP,price,OCCU,details));
             }
             return data;
         } catch (SQLException ex) {
@@ -54,7 +60,7 @@ public class room{
         }
         return data;
     }
-    public boolean  changeOccu(int id,int occ){
+    public boolean  changeOccupancy(int id,int occ){
         try{
             String sql = "UPDATE room set occupancy = ? where(roomNo = ?) ";
             PreparedStatement preparedStatementt = connection.prepareStatement(sql);
@@ -76,7 +82,6 @@ public class room{
     public static void main(String[] args) {
         room ne = new room();
         ObservableList<room> data = ne.getRoom();
-
     }
 
 }

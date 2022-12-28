@@ -23,6 +23,8 @@ public class roomBox implements Initializable {
 
     private Stage stage;
     private Scene scene;
+    public static int index = 0;
+
     @FXML
     Button btnShow;
     @FXML
@@ -37,16 +39,20 @@ public class roomBox implements Initializable {
         room Room = new room();
         ObservableList<room> list = Room.getRoom();
         Node[] nodes = new Node[list.size()];
-        System.out.println(list.size());
+        System.out.println(list);
+        populateRoom(roomBox.index,list.get(roomBox.index));
+        roomBox.index++;
+    }
 
-        for (room item : list) {
-                    lbRoomType.setText(item.getroomType());
-                    Integer no = item.getroomname();
-                    lbRoomName.setText(no.toString());
-                }
+    public void populateRoom(int i,room item){
+        lbRoomType.setText(item.getroomType());
+        Integer no = item.getroomname();
+        lbRoomName.setText(no.toString());
+        taRoomDetails.setText(item.getDetails());
     }
 
     public void switchtoinfo(ActionEvent event){
+        roomBox.index = 0;
         Parent group = null;
         try {
             group = FXMLLoader.load(getClass().getResource("roominfo.fxml"));

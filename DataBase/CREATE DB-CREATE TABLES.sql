@@ -6,6 +6,7 @@ CREATE TABLE Room (
 	roomNo INT,
     roomType VARCHAR(20),
     roomPrice FLOAT,
+    details TEXT,
     occupancy INT
 );
 

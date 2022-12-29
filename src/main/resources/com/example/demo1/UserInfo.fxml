@@ -6,7 +6,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.UserAccount">
    <children>
-      <AnchorPane layoutX="146.0" layoutY="51.0" prefHeight="336.0" prefWidth="561.0">
+      <AnchorPane layoutX="185.0" layoutY="67.0" prefHeight="336.0" prefWidth="561.0">
          <TextField fx:id="Fullname" layoutX="134.0" layoutY="33.0" />
          <TextField fx:id="Email" layoutX="134.0" layoutY="65.0" />
          <TextField fx:id="Phone" layoutX="135.0" layoutY="132.0" />

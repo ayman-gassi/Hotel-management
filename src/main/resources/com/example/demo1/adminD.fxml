@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="497.0" prefWidth="912.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AdminDashController">
    <children>
-      <Pane layoutX="198.0" layoutY="50.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: skyblue;">
+      <Pane layoutX="203.0" layoutY="20.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: skyblue;">
          <children>
             <ImageView fitHeight="69.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -32,7 +32,7 @@
                </font>
             </Label>
          </children></Pane>
-      <Pane layoutX="435.0" layoutY="50.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: skyblue;">
+      <Pane layoutX="435.0" layoutY="20.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: skyblue;">
          <children>
             <ImageView fitHeight="69.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -51,7 +51,7 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="675.0" layoutY="50.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: skyblue;">
+      <Pane layoutX="674.0" layoutY="20.0" prefHeight="115.0" prefWidth="200.0" style="-fx-background-color: skyblue;">
          <children>
             <ImageView fitHeight="69.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -158,12 +158,12 @@
          <content>
             <TableView fx:id="tvClients" prefHeight="299.0" prefWidth="678.0">
                <columns>
-                  <TableColumn fx:id="id" minWidth="20.0" prefWidth="75.0" text="ID" />
-                  <TableColumn fx:id="fname" minWidth="80.0" prefWidth="75.0" text="First Name" />
-                  <TableColumn fx:id="lname" minWidth="90.0" prefWidth="75.0" text="Last Name" />
-                  <TableColumn fx:id="titletype" minWidth="90.0" prefWidth="75.0" text="Title Type" />
-                  <TableColumn fx:id="titleno" minWidth="100.0" prefWidth="75.0" text="Title No." />
-                  <TableColumn fx:id="mail" minWidth="100.0" prefWidth="75.0" text="Email" />
+                  <TableColumn fx:id="id" minWidth="20.0" prefWidth="43.99997025728226" text="ID" />
+                  <TableColumn fx:id="fname" minWidth="53.5999755859375" prefWidth="91.99999618530273" text="First Name" />
+                  <TableColumn fx:id="lname" minWidth="51.20001220703125" prefWidth="92.00006103515625" text="Last Name" />
+                  <TableColumn fx:id="titletype" minWidth="62.4000244140625" prefWidth="109.59992980957031" text="Title Type" />
+                  <TableColumn fx:id="titleno" minWidth="56.0" prefWidth="95.20001220703125" text="Title No." />
+                  <TableColumn fx:id="mail" minWidth="63.20001220703125" prefWidth="224.79998779296875" text="Email" />
                </columns>
             </TableView>
          </content>

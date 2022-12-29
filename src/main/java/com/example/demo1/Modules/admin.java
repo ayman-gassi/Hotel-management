@@ -4,10 +4,7 @@ import com.example.demo1.DBConnect.DBConnectivity;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Date;
 
 public class admin {
@@ -74,6 +71,25 @@ public class admin {
             System.out.println(ex.getMessage());
         }
         return data;
+    }
+    public boolean  CheckAdmin(String email,String Pass){
+        try{
+            String sql = "SELECT * FROM admin WHERE (email = ? AND pwd = ?) LIMIT 1";
+            PreparedStatement preparedStatementt = connection.prepareStatement(sql);
+            preparedStatementt.setString(1,email);
+            preparedStatementt.setString(2,Pass);
+            int addr = preparedStatementt.executeUpdate();
+            if(addr > 0){
+                return true;
+            }
+            else{
+                return false;
+            }
+
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return false;
     }
 
     public static void main(String[] args){

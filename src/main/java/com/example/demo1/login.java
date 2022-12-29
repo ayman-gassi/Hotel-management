@@ -1,6 +1,7 @@
 package com.example.demo1;
 
 import com.example.demo1.Modules.Client;
+import com.example.demo1.Modules.admin;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,21 +31,40 @@ public class login
         }
         else{
             Client client = new Client();
+            admin Admin = new admin();
             boolean rst = client.CheckUser(username.getText(),password.getText());
             if(rst==true){
-                    Parent group = null;
-                    try {
-                        group = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
+                    boolean check = Admin.CheckAdmin(username.getText(),password.getText());
+                    if(check==true){
+                        Parent group = null;
+                        try {
+                            group = FXMLLoader.load(getClass().getResource("adminH.fxml"));
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        scene = new Scene(group);
+                        stage.setScene(scene);
+                        stage.setTitle("Hotel | Home");
+                        stage.setWidth(920);
+                        stage.setHeight(525);
+                        stage.show();
                     }
-                    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                    scene = new Scene(group);
-                    stage.setScene(scene);
-                    stage.setTitle("Hotel | Home");
-                    stage.setWidth(912);
-                    stage.setHeight(520);
-                    stage.show();
+                    else {
+                        Parent group = null;
+                        try {
+                            group = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        scene = new Scene(group);
+                        stage.setScene(scene);
+                        stage.setTitle("Hotel | Home");
+                        stage.setWidth(920);
+                        stage.setHeight(525);
+                        stage.show();
+                    }
                 }else{
                     alert.setVisible(true);
                     alert.setText("Username Or Password Incorrect");

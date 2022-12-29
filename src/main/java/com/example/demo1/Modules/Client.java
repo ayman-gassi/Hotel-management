@@ -159,7 +159,7 @@ public class Client {
     }
     public boolean  CheckUser(String email,String Pass){
         try{
-            String sql = "SELECT * FROM client WHERE (email = ? AND pwd = ?)";
+            String sql = "SELECT * FROM client WHERE (email = ? AND pwd = ?) LIMIT 1";
             PreparedStatement preparedStatementt = connection.prepareStatement(sql);
             preparedStatementt.setString(1,email);
             preparedStatementt.setString(2,Pass);
@@ -174,7 +174,7 @@ public class Client {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
-        return true;
+        return false;
     }
 
     public static void main(String[] args) throws SQLException {

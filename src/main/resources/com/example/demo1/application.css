@@ -1,0 +1,22 @@
+.root{
+    -fx-background-color:#FFFFFF;
+}
+#Email{
+    -fx-border-width: 0  0 1 0 ;
+}
+.label{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: normal;
+        -fx-color:red;
+}
+#Edit,#Save,#Cancel{
+    -fx-background-radius:7;
+    -fx-background-color:skyblue;
+    -fx-font-family: "Poppins";
+}
+.button:hover{
+    -fx-scale-x: 1.11;
+    -fx-scale-y: 1.11;
+    -fx-scale-z: 1.11;
+}

@@ -6,35 +6,33 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.UserAccount">
    <children>
-      <AnchorPane layoutX="19.0" layoutY="48.0" prefHeight="336.0" prefWidth="561.0">
-         <children>
-            <TextField fx:id="Fullname" layoutX="134.0" layoutY="33.0" />
-            <TextField fx:id="Email" layoutX="134.0" layoutY="65.0" />
-            <TextField fx:id="DOB" layoutX="135.0" layoutY="98.0" />
-            <TextField fx:id="Phone" layoutX="135.0" layoutY="132.0" />
-            <TextField fx:id="Gender" layoutX="134.0" layoutY="165.0" />
-            <Label layoutX="13.0" layoutY="37.0" prefHeight="18.0" prefWidth="100.0" text="     Full Name :" />
-            <Label layoutX="22.0" layoutY="69.0" prefHeight="18.0" prefWidth="100.0" text="  Email Adress :" />
-            <Label layoutX="29.0" layoutY="102.0" prefHeight="18.0" prefWidth="100.0" text="Date Of Birthday :" />
-            <Label layoutX="12.0" layoutY="135.0" prefHeight="18.0" prefWidth="113.0" text="     Phone Number  :" />
-            <Label layoutX="19.0" layoutY="167.0" prefHeight="18.0" prefWidth="113.0" text="   Gender : " />
-            <TextField fx:id="Password" layoutX="135.0" layoutY="198.0" />
-            <TextField fx:id="NumId" layoutX="389.0" layoutY="198.0" prefHeight="25.0" prefWidth="149.0" />
-            <Label layoutX="29.0" layoutY="200.0" prefHeight="18.0" prefWidth="113.0" text="Password :" />
-            <Label layoutX="301.0" layoutY="201.0" prefHeight="18.0" prefWidth="113.0" text="   Num Id  : " />
-            <Label layoutX="308.0" layoutY="37.0" prefHeight="18.0" prefWidth="51.0" text="Title :" />
-            <Label layoutX="309.0" layoutY="69.0" prefHeight="18.0" prefWidth="65.0" text="Title Num :" />
-            <TextField fx:id="Title" layoutX="389.0" layoutY="33.0" />
-            <TextField fx:id="Adress" layoutX="389.0" layoutY="98.0" />
-            <TextField fx:id="TitleNum" layoutX="389.0" layoutY="65.0" />
-            <Label layoutX="309.0" layoutY="100.0" prefHeight="18.0" prefWidth="100.0" text="Adress : " />
-            <Label layoutX="309.0" layoutY="133.0" prefHeight="18.0" prefWidth="100.0" text="City :" />
-            <Label layoutX="309.0" layoutY="165.0" prefHeight="18.0" prefWidth="100.0" text="Country :" />
-            <TextField fx:id="Country" layoutX="389.0" layoutY="165.0" />
-            <TextField fx:id="City" layoutX="389.0" layoutY="131.0" />
-            <Label layoutX="186.0" layoutY="254.0" prefHeight="18.0" prefWidth="100.0" text="Salary :" />
-            <TextField fx:id="Salary" layoutX="238.0" layoutY="252.0" />
-         </children>
+      <AnchorPane layoutX="146.0" layoutY="51.0" prefHeight="336.0" prefWidth="561.0">
+         <TextField fx:id="Fullname" layoutX="134.0" layoutY="33.0" />
+         <TextField fx:id="Email" layoutX="134.0" layoutY="65.0" />
+         <TextField fx:id="Phone" layoutX="135.0" layoutY="132.0" />
+         <Label layoutX="13.0" layoutY="37.0" prefHeight="18.0" prefWidth="100.0" text="     Full Name :" />
+         <Label layoutX="22.0" layoutY="69.0" prefHeight="18.0" prefWidth="100.0" text="  Email Adress :" />
+         <Label layoutX="29.0" layoutY="102.0" prefHeight="18.0" prefWidth="100.0" text="Date Of Birthday :" />
+         <Label layoutX="12.0" layoutY="135.0" prefHeight="18.0" prefWidth="113.0" text="     Phone Number  :" />
+         <Label layoutX="19.0" layoutY="167.0" prefHeight="18.0" prefWidth="113.0" text="   Gender : " />
+         <TextField fx:id="Password" layoutX="135.0" layoutY="198.0" />
+         <TextField fx:id="NumId" layoutX="389.0" layoutY="198.0" prefHeight="25.0" prefWidth="149.0" />
+         <Label layoutX="29.0" layoutY="200.0" prefHeight="18.0" prefWidth="113.0" text="Password :" />
+         <Label layoutX="301.0" layoutY="201.0" prefHeight="18.0" prefWidth="113.0" text="   Num Id  : " />
+         <Label layoutX="308.0" layoutY="37.0" prefHeight="18.0" prefWidth="51.0" text="Title :" />
+         <Label layoutX="309.0" layoutY="69.0" prefHeight="18.0" prefWidth="65.0" text="Title Num :" />
+         <TextField fx:id="Title" layoutX="389.0" layoutY="33.0" />
+         <TextField fx:id="Adress" layoutX="389.0" layoutY="98.0" />
+         <TextField fx:id="TitleNum" layoutX="389.0" layoutY="65.0" />
+         <Label layoutX="309.0" layoutY="100.0" prefHeight="18.0" prefWidth="100.0" text="Adress : " />
+         <Label layoutX="309.0" layoutY="133.0" prefHeight="18.0" prefWidth="100.0" text="City :" />
+         <Label layoutX="309.0" layoutY="165.0" prefHeight="18.0" prefWidth="100.0" text="Country :" />
+         <TextField fx:id="Country" layoutX="389.0" layoutY="165.0" />
+         <TextField fx:id="City" layoutX="389.0" layoutY="131.0" />
+         <Label layoutX="186.0" layoutY="254.0" prefHeight="18.0" prefWidth="100.0" text="Salary :" />
+         <TextField fx:id="Salary" layoutX="238.0" layoutY="252.0" />
+         <DatePicker fx:id="DOB" layoutX="135.0" layoutY="98.0" prefHeight="25.0" prefWidth="149.0" />
+         <ComboBox fx:id="Gender" layoutX="135.0" layoutY="165.0" prefHeight="25.0" prefWidth="149.0" />
       </AnchorPane>
       <AnchorPane layoutX="312.0" layoutY="384.0" prefHeight="67.0" prefWidth="240.0">
          <children>
@@ -43,6 +41,7 @@
             <Button id="Save" layoutX="13.0" layoutY="21.0" mnemonicParsing="false" onAction="#SaveChanges" prefHeight="25.0" prefWidth="61.0" text="Save" />
          </children>
       </AnchorPane>
+
    </children>
    <stylesheets>
       <URL value="@application.css" />

@@ -1,5 +1,6 @@
 package com.example.demo1;
 
+import com.example.demo1.DBConnect.DBConnectivity;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -9,9 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 
 import java.io.IOException;
@@ -22,15 +21,36 @@ import java.util.ResourceBundle;
 
 public class UserAccount implements Initializable {
     @FXML
-    TextField Fullname , Email , DOB , Phone , Gender , Password , NumId , Title , Adress ,
+    TextField Fullname , Email  , Phone , Password , NumId , Title , Adress ,
             TitleNum  , Country , City  , Salary  ;
+    @FXML
+    DatePicker DOB ;
+    @FXML
+    private ComboBox <String> Gender;
+    private String[] gender = {"Male","Female"};
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
+        Fullname.setStyle("-fx-background-color: white;");
+        Email.setStyle("-fx-background-color: white;");
+        Gender.setStyle("-fx-background-color: white;");
+        Phone.setStyle("-fx-background-color: white;");
+        DOB.setStyle("-fx-background-color: white;");
+        Password.setStyle("-fx-background-color: white;");
+        NumId.setStyle("-fx-background-color: white;");
+        Adress.setStyle("-fx-background-color: white;");
+        Title.setStyle("-fx-background-color: white;");
+        TitleNum.setStyle("-fx-background-color: white;");
+        Country.setStyle("-fx-background-color: white;");
+        City.setStyle("-fx-background-color: white;");
+        Salary.setStyle("-fx-background-color: white;");
+
         Fullname.setEditable(false);
         Email.setEditable(false);
-        DOB.setEditable(false);
         Gender.setEditable(false);
         Phone.setEditable(false);
+        DOB.setEditable(false);
         Password.setEditable(false);
         NumId.setEditable(false);
         Adress.setEditable(false);
@@ -39,30 +59,32 @@ public class UserAccount implements Initializable {
         Country.setEditable(false);
         City.setEditable(false);
         Salary.setEditable(false);
+
+
+//       try{
+//            Client client = new Client();
+//            admin Admin = new admin();
+//            boolean rst = client.CheckUser(username.getText(),password.getText());
+//        }catch(Exception e){
+//            System.err.println(e.getMessage());
+//        }
+
     }
-    public void editall(ActionEvent e) {
+    public void editall(ActionEvent e){
         Fullname.setEditable(true);
         Email.setEditable(true);
-        DOB.setEditable(true);
         Gender.setEditable(true);
         Phone.setEditable(true);
         Password.setEditable(true);
         NumId.setEditable(true);
+        DOB.setEditable(true);
         Adress.setEditable(true);
         Title.setEditable(true);
         TitleNum.setEditable(true);
         Country.setEditable(true);
         City.setEditable(true);
         Salary.setEditable(true);
-        /* BD editing */
-//        try{
-////            ResultSet rst = stmt.executeQuery("select * from gslearning");
-////            while(rst.next()){
-////                System.out.println("id : "+rst.getInt("id")+" fullname : "+rst.getString("fullname")+" number : "+rst.getString("number")+" gmail : "+rst.getString("gmail")+"  rate : "+rst.getString("rate"));
-//            //}
-//        }catch(Exception e){
-//            System.err.println(e.getMessage());
-//        }
+        Gender.getItems().addAll(gender);
     }
     public void Cancel(ActionEvent e)throws IOException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -76,14 +98,8 @@ public class UserAccount implements Initializable {
     }
     public void SaveChanges(ActionEvent e){
         System.out.println("Succesfully");
-//        try{
-////            ResultSet rst = stmt.executeQuery("update table client set");
-////            while(rst.next()){
-////                System.out.println("id : "+rst.getInt("id")+" fullname : "+rst.getString("fullname")+" number : "+rst.getString("number")+" gmail : "+rst.getString("gmail")+"  rate : "+rst.getString("rate"));
-//        //}
-//        }catch(Exception e){
-//            System.err.println(e.getMessage());
-//        }
+
+
 
     }
 }

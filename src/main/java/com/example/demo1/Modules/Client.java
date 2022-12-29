@@ -129,6 +129,14 @@ public class Client {
         return data;
     }
 
+    public int nbrClient() throws SQLException{
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) count FROM Client");
+        resultSet.next();
+        int nbrClient = resultSet.getInt("count");
+        return nbrClient;
+    }
+
     public ObservableList getClientsId() {
         ObservableList<Client> data = FXCollections.observableArrayList();
         try {
@@ -169,12 +177,9 @@ public class Client {
         return true;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Client ne = new Client();
-        ObservableList<Client> data = ne.getClients();
-        for (Client client : data) {
-            System.out.println(client.firstName);
-        }
+        System.out.println(ne.nbrClient());
     }
 
     public String getClientTitle() {

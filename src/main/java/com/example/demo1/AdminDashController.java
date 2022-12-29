@@ -1,6 +1,7 @@
 package com.example.demo1;
 
 import com.example.demo1.Modules.Client;
+import com.example.demo1.Modules.Room;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -16,6 +18,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class AdminDashController implements Initializable {
@@ -39,13 +42,21 @@ public class AdminDashController implements Initializable {
     TableColumn<Client,String> titleno;
     @FXML
     TableColumn<Client,String> mail;
-
+    @FXML
+    Label lbNbrClient;
+    @FXML
+    Label lbNbrRoom;
 
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        Room room = new Room();
         Client client = new Client();
         ObservableList<Client> data = client.getClientsId();
-
+        try {
+            lbNbrRoom.setText(String.valueOf(room.nbrRooms()));
+            lbNbrClient.setText(String.valueOf(client.nbrClient()));
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
         populateClientTableView(tvClients,data);
 
         //EVENT HANDLERS
@@ -75,6 +86,5 @@ public class AdminDashController implements Initializable {
         fname.setCellValueFactory(new PropertyValueFactory<Client,String>("firstName"));
         lname.setCellValueFactory(new PropertyValueFactory<Client,String>("lastName"));
         mail.setCellValueFactory(new PropertyValueFactory<Client,String>("email"));
-
     }
 }

@@ -121,6 +121,13 @@ public class Room {
         }
         return true;
     }
+    public int nbrRooms() throws SQLException{
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) count FROM Room");
+        resultSet.next();
+        int nbrRoom = resultSet.getInt("count");
+        return nbrRoom;
+    }
 
 
     public static void main(String[] args) {

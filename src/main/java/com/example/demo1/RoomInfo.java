@@ -49,7 +49,6 @@ public class RoomInfo implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println(roomBox.clicked);
         Room room = new Room();
             try {
                 Room roomInfo = room.getRoom(roomBox.clicked);

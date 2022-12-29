@@ -123,6 +123,6 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextArea fx:id="d" layoutX="190.0" layoutY="200.0" prefHeight="118.0" prefWidth="214.0" promptText="DESCRIPTION" />
+      <TextArea fx:id="DESCRIPTION" layoutX="190.0" layoutY="200.0" prefHeight="118.0" prefWidth="214.0" promptText="DESCRIPTION" />
    </children>
 </AnchorPane>

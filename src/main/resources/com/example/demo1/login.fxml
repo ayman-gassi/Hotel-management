@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="497.0" prefWidth="912.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.login">
+   <children>
+      <Pane prefHeight="498.0" prefWidth="422.0" style="-fx-background-color: skyblue;">
+         <children>
+            <ImageView fitHeight="258.0" fitWidth="220.0" layoutX="101.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/hotel.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="594.0" layoutY="38.0" prefHeight="46.0" prefWidth="144.0" text="Welcome To">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="username" alignment="CENTER" layoutX="526.0" layoutY="173.0" prefHeight="32.0" prefWidth="279.0" promptText="Enter Email" />
+      <TextField fx:id="password" alignment="CENTER" layoutX="526.0" layoutY="217.0" prefHeight="32.0" prefWidth="279.0" promptText="Enter Password" />
+      <Button layoutX="526.0" layoutY="281.0" mnemonicParsing="false" onAction="#connexion" prefHeight="32.0" prefWidth="279.0" style="-fx-background-color: skyblue;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="526.0" layoutY="84.0" prefHeight="46.0" prefWidth="279.0" text="HOTEL NAME">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="534.0" layoutY="340.0" text="New Member ?">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="alert" alignment="CENTER" layoutX="525.0" layoutY="138.0" prefHeight="32.0" prefWidth="279.0" style="-fx-background-color: red;" text="Username Or Password Incorrect" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

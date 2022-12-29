@@ -99,14 +99,15 @@ public class Room {
         room.details = resultSet.getString("details");
         return room;
     }
-    public boolean  addRoom(int ROOMNO,String ROOMTYPE,float ROOMPRICE){
+    public boolean  addRoom(int ROOMNO,String ROOMTYPE,float ROOMPRICE,String DETAILS){
         try{
-            String sql = "INSERT INTO room(roomNo,roomType,roomPrice,occupancy) values(?,?,?,?)";
+            String sql = "INSERT INTO room(roomNo,roomType,roomPrice,occupancy,details) values(?,?,?,?,?)";
             PreparedStatement preparedStatementt = connection.prepareStatement(sql);
             preparedStatementt.setInt(1,ROOMNO);
             preparedStatementt.setString(2,ROOMTYPE);
             preparedStatementt.setFloat(3,ROOMPRICE);
             preparedStatementt.setInt(4,1);
+            preparedStatementt.setString(5,DETAILS);
             int addr = preparedStatementt.executeUpdate();
             if(addr>0){
                 return true;
@@ -120,6 +121,7 @@ public class Room {
         }
         return true;
     }
+
 
     public static void main(String[] args) {
         Room ne = new Room();

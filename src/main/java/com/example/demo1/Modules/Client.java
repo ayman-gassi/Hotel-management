@@ -4,10 +4,7 @@ import com.example.demo1.DBConnect.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Date;
 
 public class Client {
@@ -152,7 +149,25 @@ public class Client {
         }
         return data;
     }
+    public boolean  CheckUser(String email,String Pass){
+        try{
+            String sql = "SELECT * FROM client WHERE (email = ? AND pwd = ?)";
+            PreparedStatement preparedStatementt = connection.prepareStatement(sql);
+            preparedStatementt.setString(1,email);
+            preparedStatementt.setString(2,Pass);
+            int addr = preparedStatementt.executeUpdate();
+            if(addr > 0){
+                return true;
+            }
+            else{
+                return false;
+            }
 
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return true;
+    }
 
     public static void main(String[] args) {
         Client ne = new Client();

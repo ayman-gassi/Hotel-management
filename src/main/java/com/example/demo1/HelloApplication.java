@@ -17,7 +17,7 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         stage.setTitle("Hotel | HOME");
-        Parent group = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        Parent group = FXMLLoader.load(getClass().getResource("login.fxml"));
         Scene scene = new Scene(group);
         stage.setScene(scene);
         stage.show();

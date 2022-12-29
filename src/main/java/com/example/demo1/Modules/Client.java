@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Client {
@@ -159,10 +160,40 @@ public class Client {
     }
     public boolean  CheckUser(String email,String Pass){
         try{
-            String sql = "SELECT * FROM client WHERE (email = ? AND pwd = ?) LIMIT 1";
+            String sql = "SELECT * FROM client WHERE (email = ? AND pwd = ?)";
             PreparedStatement preparedStatementt = connection.prepareStatement(sql);
             preparedStatementt.setString(1,email);
             preparedStatementt.setString(2,Pass);
+            int addr = preparedStatementt.executeUpdate();
+            if(addr > 0){
+                return true;
+            }
+            else{
+                return false;
+            }
+
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return false;
+    }
+
+    public boolean  AddUser(String first_Name, String last_Name, String client_Title, String client_Title_No, String PHONE, LocalDate DOB, String GENDER, String _emailS, String PSWD, String ADRESSE, String CITY, String COUNTRY){
+        try{
+            String sql = "INSERT INTO client(firstName,lastName,clientTitle,clientTitleNo,phoneNo,DOB,gender,email,pwd,adresse,city,country) values(?,?,?,?,?,?,?,?,?,?,?,?) ";
+            PreparedStatement preparedStatementt = connection.prepareStatement(sql);
+            preparedStatementt.setString(1,first_Name);
+            preparedStatementt.setString(2,last_Name);
+            preparedStatementt.setString(3,client_Title);
+            preparedStatementt.setString(4,client_Title_No);
+            preparedStatementt.setInt(5, Integer.parseInt(PHONE));
+            preparedStatementt.setDate(6, java.sql.Date.valueOf(DOB));
+            preparedStatementt.setString(7,GENDER);
+            preparedStatementt.setString(8,_emailS);
+            preparedStatementt.setString(9,PSWD);
+            preparedStatementt.setString(10,ADRESSE);
+            preparedStatementt.setString(11,CITY);
+            preparedStatementt.setString(12,COUNTRY);
             int addr = preparedStatementt.executeUpdate();
             if(addr > 0){
                 return true;

@@ -73,6 +73,21 @@ public class login
                 }
             }
         }
+        public void switchToRegister(ActionEvent event){
+            Parent group = null;
+            try {
+                group = FXMLLoader.load(getClass().getResource("register.fxml"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            scene = new Scene(group);
+            stage.setScene(scene);
+            stage.setTitle("Hotel | Register");
+            stage.setWidth(920);
+            stage.setHeight(525);
+            stage.show();
+            }
     }
 
 
